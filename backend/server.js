@@ -26,6 +26,7 @@ app.get("/weather", async (req, res) => {
   console.log(resultJSON);
 
   const weatherData = {
+    city: resultJSON.data.name,
     temperature: resultJSON.data.main.temp,
     description: resultJSON.data.weather[0].description,
     pressure: resultJSON.data.main.pressure,
